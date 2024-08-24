@@ -26,7 +26,7 @@ async def index(request: Request):
 @app.post("/predict", response_class=HTMLResponse)
 async def predict(request: Request, client_id: int = Form(...)):
     """
-    This function predicts a customer's creditworthiness on the basis of their identifier.
+    This function predicts a customer's creditworthiness on the basis of their identifier
     """
     # Check if the client_id exists
     if client_id not in data_test_sampled.index:
@@ -46,7 +46,7 @@ async def predict(request: Request, client_id: int = Form(...)):
     else:
         message = "<strong style='color:green;'>request accepted</strong>"
 
-    # Return results with message
+    # Return results with message.
     return templates.TemplateResponse("index.html", {
         "request": request,
         "client_id": client_id,
