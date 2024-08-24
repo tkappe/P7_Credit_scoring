@@ -3,3 +3,6 @@ numpy
 fastapi
 uvicorn
 scikit-learn
+lightgbm
+pytest
+pickle

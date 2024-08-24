@@ -1,1 +1,7 @@
+__pycache__/
+.pytest_cache/
+__pycache__/
 env/
+data/
+test/
+.gitattributes
