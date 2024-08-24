@@ -13,7 +13,9 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 # Loadding the data
-data_test_sampled = pd.read_csv('C:/Users/tykap/OneDrive/Bureau/P7_Credit_scoring/data/test_feature_engineering_sampled.csv.gz', compression='gzip')
+base_dir = os.path.dirname(__file__)
+file_path = os.path.join(base_dir, 'data\\test_feature_engineering_sampled.csv.gz')
+data_test_sampled = pd.read_csv(file_path, compression='gzip')
 data_test_sampled.set_index('SK_ID_CURR', inplace=True)
 
 # Load the model from disk
